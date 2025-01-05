@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html are 100% height */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  ;
+}
+.logo-container {
+    display: flex; /* Align items horizontally */
+    justify-content: flex-start; /* Align all elements to the left */
+    align-items: baseline; /* Vertically align items on the same baseline */
+    position: absolute;
+    top: 55%;  /* Adjust this value for vertical positioning */
+    left: 60%; /* Adjust this value for horizontal positioning */
+    transform: translate(-50%, -50%) ; /* Centers the LogoAnimation */
+    z-index: 1; /* Ensures it is above the image */
+    width: auto; /* Adjust width relative to viewport width */
+    height: 20%; /* Adjust height relative to viewport height */
+  }
+  
+  .logo-partc {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start off-screen */
+    animation: slideIn 0.5s forwards ease-in-out;
+    width: auto; /* Uniform width for all parts */
+    height: 50%; /* Uniform height for all parts */
+    display: flex; /* Ensures the image centers within the background */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensures images don’t overflow their container */
+  }
+
+
+  .logo-parta {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start off-screen */
+    animation: slideIn 0.5s forwards ease-in-out;
+    height: 30%; /* Uniform height for all parts */
+    width: auto;
+    display: flex; /* Ensures the image centers within the background */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensures images don’t overflow their container */
+  }
+  .logo-parth {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start off-screen */
+    animation: slideIn 0.5s forwards ease-in-out;
+    height: 33%; /* Uniform height for all parts */
+    width: auto;
+    display: flex; /* Ensures the image centers within the background */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensures images don’t overflow their container */
+  }
+ 
+  .logo-parta img {
+    width: auto; /* Adjust width proportionally */
+    height: 100%; /* Fill the height of the background */
+  }
+  .logo-partc img {
+    width: auto; /* Adjust width proportionally */
+    height: 100%; /* Fill the height of the background */
+  }
+  .logo-parth img {
+    width: auto; /* Adjust width proportionally */
+    height: 100%; /* Fill the height of the background */
+  }
+  
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px); /* Start sliding in from the left */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the final position */
+    }
+  }
+ 
+  @media (max-width:100vh) {
+    
+    .logo-container{
+      flex-direction: row;
+    }
+    
+      
+    }
+    @media (min-width: 1024px) {
+      .logo-container {
+        height: 50%; /* Height for laptops and larger screens */
+        left: 70%;
+        top:60%;
+      }
+    }
